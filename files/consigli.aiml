@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>Puoi consigliarmi un libro simile a * </pattern>
+    <template>
+        <think><set name="libro"><star/></set></think>
+        Di che genere è <get name="libro"/>?
+</template>
+</category>
+
+<category>
+    <pattern> * </pattern>
+    <template>
+        <think><set name="genere"><star/></set></think>
+        <condition name="genere">
+            <li value="fantasy">Secondo me, "Il Signore degli Anelli" di J.R.R. Tolkien potrebbe essere di tuo gradimento!</li>
+            <li value="giallo">Ottima scelta! Ti consiglio "Assassinio sull'Orient Express" di Agatha Christie.</li>
+            <li value="fantascienza"> Potrebbe piacerti "Fondazione" di Isaac Asimov!</li>
+            <li value="romanzo storico"> Secondo me dovresti provare "I pilastri della terra" di Ken Follett.</li>
+            <li value="horror"> Se non lo hai ancora letto, io ti consiglio "It" di Stephen King.</li>
+            <li value="poesia"> "Le poesie" di Pablo Neruda ti piacerà moltissimo!</li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>Potresti consigliarmi un libro *</pattern>
+     <template>
+        <think><set name="genere"><star/></set></think>
+        <condition name="genere">
+            <li value="fantasy">Secondo me, "Il Signore degli Anelli" di J.R.R. Tolkien potrebbe essere di tuo gradimento!</li>
+            <li value="giallo">Ottima scelta! Ti consiglio "Assassinio sull'Orient Express" di Agatha Christie.</li>
+            <li value="fantascienza"> Potrebbe piacerti "Fondazione" di Isaac Asimov!</li>
+            <li value="romanzo storico"> Secondo me dovresti provare "I pilastri della terra" di Ken Follett.</li>
+            <li value="horror"> Se non lo hai ancora letto, io ti consiglio "It" di Stephen King.</li>
+            <li value="poesia"> "Le poesie" di Pablo Neruda ti piacerà moltissimo!</li>
+            <li>Non ho un consiglio specifico per questo genere, ma puoi cercare nel catalogo<link> <text> Minerva </text> <url> https://lc.cx/l7Fjx_</url> </link></li>
+        </condition>
+    </template>
+</category>
+
+</aiml>

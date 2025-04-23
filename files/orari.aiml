@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+ <category>
+        <pattern> * orari della biblioteca </pattern>
+        <template>
+        La biblioteca è aperta dal lunedì al venerdì, dalle 9:00 alle 18:00.
+        Ma dalle 17 alle 18 si effettuano solo i servizi base!
+        <think><set name="contesto">servizi_base</set></think>
+        </template>
+    </category>
+    
+     <category>
+        <pattern> * servizi avanzati </pattern>
+        <template> I servizi bibliotecari avanzati vengono erogati dalle ore 09.00 alle ore 17.00. Vi rientrano le attività di orientamento e consulenza bibliografica, la registrazione e restituzione del prestito al banco di accoglienza, i servizi interbibliotecari, l'accesso alle collezioni collocate a magazzino. </template>
+    </category>
+    
+    <category>
+        <pattern> * servizi di base</pattern>
+        <template> I servizi bibliotecari di base sono garantiti durante tutto l'orario di apertura e includono l'utilizzo dei posti studio, la consultazione delle collezioni disposte a scaffale aperto, l'autoprestito e la riconsegna dei libri nei box di restituzione. </template>
+    </category>
+    
+     <category>
+        <pattern> * servizi base</pattern>
+        <template> I servizi bibliotecari di base sono garantiti durante tutto l'orario di apertura e includono l'utilizzo dei posti studio, la consultazione delle collezioni disposte a scaffale aperto, l'autoprestito e la riconsegna dei libri nei box di restituzione. </template>
+    </category>
+    
+    <category>
+        <pattern> * differenza c'è tra servizio base e avanzato</pattern>
+        <template> I servizi bibliotecari di base sono garantiti durante tutto l'orario di apertura e includono l'utilizzo dei posti studio, la consultazione delle collezioni disposte a scaffale aperto, l'autoprestito e la riconsegna dei libri nei box di restituzione. I servizi bibliotecari avanzati vengono erogati dalle ore 09.00 alle ore 17.00. Vi rientrano le attività di orientamento e consulenza bibliografica, la registrazione e restituzione del prestito al banco di accoglienza, i servizi interbibliotecari, l'accesso alle collezioni collocate a magazzino. </template>
+    </category>
+    
+    <category>
+        <pattern> * differenza c'è fra servizio base e avanzato</pattern>
+        <template> I servizi bibliotecari di base sono garantiti durante tutto l'orario di apertura e includono l'utilizzo dei posti studio, la consultazione delle collezioni disposte a scaffale aperto, l'autoprestito e la riconsegna dei libri nei box di restituzione. I servizi bibliotecari avanzati vengono erogati dalle ore 09.00 alle ore 17.00. Vi rientrano le attività di orientamento e consulenza bibliografica, la registrazione e restituzione del prestito al banco di accoglienza, i servizi interbibliotecari, l'accesso alle collezioni collocate a magazzino. </template>
+    </category>
+    
+    <category>
+        <pattern> * la differenza tra servizio base e avanzato</pattern>
+        <template> I servizi bibliotecari di base sono garantiti durante tutto l'orario di apertura e includono l'utilizzo dei posti studio, la consultazione delle collezioni disposte a scaffale aperto, l'autoprestito e la riconsegna dei libri nei box di restituzione. I servizi bibliotecari avanzati vengono erogati dalle ore 09.00 alle ore 17.00. Vi rientrano le attività di orientamento e consulenza bibliografica, la registrazione e restituzione del prestito al banco di accoglienza, i servizi interbibliotecari, l'accesso alle collezioni collocate a magazzino. </template>
+    </category>
+    
+    <category>
+        <pattern> * la differenza fra servizio base e avanzato</pattern>
+        <template> I servizi bibliotecari di base sono garantiti durante tutto l'orario di apertura e includono l'utilizzo dei posti studio, la consultazione delle collezioni disposte a scaffale aperto, l'autoprestito e la riconsegna dei libri nei box di restituzione. I servizi bibliotecari avanzati vengono erogati dalle ore 09.00 alle ore 17.00. Vi rientrano le attività di orientamento e consulenza bibliografica, la registrazione e restituzione del prestito al banco di accoglienza, i servizi interbibliotecari, l'accesso alle collezioni collocate a magazzino. </template>
+    </category>
+    
+    <category>
+        <pattern> * aprite </pattern>
+        <template> La biblioteca apre alle 9 </template>
+    </category>
+    
+    <category>
+        <pattern> * aprite oggi </pattern>
+        <template> La biblioteca apre alle 9 </template>
+    </category>
+    
+    <category>
+        <pattern> * aprite domani </pattern>
+        <template> La biblioteca apre alle 9 </template>
+    </category>
+    
+    <category>
+        <pattern> * apre la biblioteca </pattern>
+        <template> La biblioteca apre alle 9 </template>
+    </category>
+    
+     <category>
+        <pattern> * la biblioteca è aperta </pattern>
+        <template> La biblioteca è aperta dal lunedì al venerdì, dalle 9:00 alle 18:00. Ma dalle 17 alle 18 si effettuano solo i servizi base! </template>
+    </category>
+    
+    <category>
+        <pattern> * è aperta la biblioteca </pattern>
+        <template> La biblioteca è aperta dal lunedì al venerdì, dalle 9:00 alle 18:00. Ma dalle 17 alle 18 si effettuano solo i servizi base! </template>
+    </category>
+    
+    <category>
+        <pattern> * siete aperti </pattern>
+        <template> La biblioteca è aperta dal lunedì al venerdì, dalle 9:00 alle 18:00. Ma dalle 17 alle 18 si effettuano solo i servizi base! </template>
+    </category>
+    
+    <category>
+        <pattern> * chiudete </pattern>
+        <template> La biblioteca chiude alle 18, ma dalle 17 fino all'orario di chiusura saranno garantiti solo i servizi di base </template>
+    </category>
+
+<category>
+        <pattern> * siete chiusi </pattern>
+        <template> La biblioteca è aperta dal lunedì al venerdì, dalle 9:00 alle 18:00. Ma dalle 17 alle 18 si effettuano solo i servizi base! </template>
+    </category>
+
+     <category>
+        <pattern> * è chiusa la biblioteca </pattern>
+        <template> La biblioteca è aperta dal lunedì al venerdì, dalle 9:00 alle 18:00. Ma dalle 17 alle 18 si effettuano solo i servizi base! </template>
+    </category>
+    
+    <category>
+        <pattern> * la biblioteca è chiusa </pattern>
+        <template> La biblioteca è aperta dal lunedì al venerdì, dalle 9:00 alle 18:00. Ma dalle 17 alle 18 si effettuano solo i servizi base! </template>
+    </category>
+    
+    <category>
+        <pattern>Quanto tempo posso stare in biblioteca?</pattern>
+        <template>Puoi stare per tutto il tempo che vuoi, l'importante è che tu prenoti il posto!</template>
+    </category>
+</aiml>

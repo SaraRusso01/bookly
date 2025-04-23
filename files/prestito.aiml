@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<link>
+    <text>Minerva</text>
+    <url> https://lc.cx/LnsQvI</url>
+</link>
+
+<category>
+        <pattern> posso prendere in prestito un libro </pattern>
+        <template>
+            
+                <random>
+                    <li>Puoi prendere in prestito un libro accedendo a<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link> il nostro catalogo online.</li>
+                    <li>Sfoglia<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link>il nostro catalogo online  e trova qui il libro che stai cercando!</li>
+                    <li>Per prendere in prestito un libro occorre prenotarlo attraverso<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link>accedendo con il tuo account universitario.</li>
+                    <li>Trovi tutti i libri disponibili per il prestito su<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link>il nostro catalogo online. Prenota qui il tuo libro e scegli in quale biblioteca preferisci ritirarlo!</li>
+                </random>
+           
+        </template>    
+    </category>
+    
+     <category>
+        <pattern> Come * prendere in prestito un libro</pattern>
+        <template><srai>Posso prendere in prestito un libro</srai></template>
+    </category>
+    
+    <category>
+        <pattern> Avete * </pattern>
+        <template>
+            <random>
+                <li>Prova a controllare su<link><text>Minerva</text><url>https://lc.cx/LnsQvI</url></link>il nostro catalogo online, qui troverai tutte le risorse del Sistema Bibliotecario d'Ateneo!</li>
+                <li>Guarda su<link><text>Minerva</text><url>https://lc.cx/LnsQvI</url></link>il nostro catalogo online, qui troverai tutte le risorse del Sistema Bibliotecario d'Ateneo!</li>
+                <li>Cercalo su<link><text>Minerva</text><url>https://lc.cx/LnsQvI</url></link>il nostro catalogo online, qui troverai tutte le risorse del Sistema Bibliotecario d'Ateneo!</li>
+            </random>
+        </template>
+    </category>
+    
+  
+</aiml>

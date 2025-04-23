@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category>
+        <pattern> * restituire * </pattern>
+        <template>
+            <think><set name="domanda"><star index="1"/></set></think>
+            <think><set name="oggetto"><star index="2"/></set></think>
+            Puoi restituire il libro direttamente in biblioteca o utilizzando il box di restituzione fuori dall'ingresso.
+        </template>    
+    </category>
+
+ <category>
+        <pattern> * restituire </pattern>
+        <template>
+            <think><set name="domanda"><star index="1"/></set></think>
+            <think><set name="oggetto"><star index="2"/></set></think>
+            Puoi restituire il libro direttamente in biblioteca o utilizzando il box di restituzione fuori dall'ingresso.
+       </template>
+    </category>
+    
+  <category>
+        <pattern> restituire * </pattern>
+        <template>
+            <think><set name="domanda"><star index="1"/></set></think>
+            <think><set name="oggetto"><star index="2"/></set></think>
+            Puoi restituire il libro direttamente in biblioteca o utilizzando il box di restituzione fuori dall'ingresso.
+       </template>
+    </category>
+
+</aiml>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+        <pattern> * accedere * risorse online * casa ^ </pattern>
+        <template> Puoi accedere da casa alle risorse elettroniche dell’Ateneo autenticandoti con le credenziali d’Ateneo. Per maggiori dettagli, visita la pagina ufficiale: 
+                  <a href="https://sba.unimi.it/it/servizi/accesso-alle-risorse-elettroniche" target="_blank">Accesso alle risorse elettroniche</a></template>
+    </category>
+    
+     <category>
+        <pattern> * accedere * risorse digitali * casa ^ </pattern>
+        <template><srai> * accedere * risorse online * casa ^ </srai></template>
+    </category>
+
+    <category>
+        <pattern> * accedere * risorse elettroniche * casa ^ </pattern>
+        <template><srai> * accedere * risorse online * casa ^ </srai></template>
+    </category>
+    
+    <category>
+         <pattern>* Mineva * accedere * risorse *</pattern>
+         <template>  Sì, puoi accedere alle risorse elettroniche anche tramite il catalogo Minerva, selezionando l’opzione “Documenti disponibili online” o filtrando per tipo di risorsa.</template>
+    </category>
+    
+    <category>
+         <pattern>* accedere * risorse * Minerva </pattern>
+         <template>  Sì, puoi accedere alle risorse elettroniche anche tramite il catalogo Minerva, selezionando l’opzione “Documenti disponibili online” o filtrando per tipo di risorsa.</template>
+    </category>
+
+    <category>
+        <pattern> * risorse ^ </pattern>
+         <template>Le risorse elettroniche dell’Ateneo sono accessibili agli utenti autenticati. Vuoi sapere come accedere da casa o tramite Minerva? Per maggiori dettagli, visita la pagina ufficiale: 
+                  <a href="https://sba.unimi.it/it/servizi/accesso-alle-risorse-elettroniche" target="_blank">Accesso alle risorse elettroniche</a> </template>
+    </category>
+    
+    <category>
+        <pattern> * </pattern>
+        <template>
+            <think><set name="risorse"><star/></set></think>
+            <condition name="risorse">
+                <li value="Minerva">Puoi accedere alle risorse elettroniche anche tramite il catalogo Minerva, selezionando l’opzione “Documenti disponibili online” o filtrando per tipo di risorsa.</li>
+                <li value="Casa">Puoi accedere da casa alle risorse elettroniche dell’Ateneo autenticandoti con le credenziali d’Ateneo.</li>
+            </condition>
+        </template>
+    </category>
+    
+</aiml>

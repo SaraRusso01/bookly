@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+        <pattern> * prenotare un posto in biblioteca</pattern>
+        <template> 
+        Puoi prenotare un posto tramite l'applicazione LezioniUnimi o tramite la <link> <text> piattaforma web </text> <url> https://prenotabiblio.sba.unimi.it/portalePlanning/biblio</url> </link> autenticandoti con le credenziali della posta elettronica d’Ateneo. </template> 
+    </category>
+
+    <category>
+        <pattern> * venire a studiare </pattern>
+        <template> Puoi prenotare un posto tramite l'applicazione LezioniUnimi o tramite la <link> <text> piattaforma web </text> <url> https://prenotabiblio.sba.unimi.it/portalePlanning/biblio</url> </link>autenticandoti con le credenziali della posta elettronica d’Ateneo. </template> 
+    </category>
+  
+   <category>
+     <pattern> posso prenotare * per *</pattern>
+     <template>
+        <think><set name="azione"><star index="1"/></set></think>
+        <think><set name="scopo"><star index="2"/></set></think>
+        Certo! Puoi prenotare <get name="azione"/> per <get name="scopo"/> tramite l’App LezioniUnimi o la <link> <text> piattaforma web </text> <url> https://prenotabiblio.sba.unimi.it/portalePlanning/biblio</url> </link> autenticandoti con le credenziali della posta elettronica d’Ateneo.
+     </template>
+    </category> 
+    
+ <category>
+     <pattern> * prenotare * per * </pattern>
+     <template>
+        <think><set name="domanda"><star index="1"/></set></think>
+        <think><set name="azione"><star index="2"/></set></think>
+        <think><set name="scopo"><star index="3"/></set></think>
+        Puoi prenotare <get name="azione"/> per <get name="scopo"/> tramite l’App LezioniUnimi o la <link> <text> piattaforma web </text> <url> https://prenotabiblio.sba.unimi.it/portalePlanning/biblio</url> </link> autenticandoti con le credenziali della posta elettronica d’Ateneo.
+     </template>
+    </category> 
+</aiml>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+        <pattern>*</pattern>
+        <template>I have no answer for that.</template>
+    </category>
+  
+    <category>
+        <pattern>Ciao</pattern>
+        <template>Ciao! Sono Bookly, il nuovo assistende della Biblioteca di Lingue e Letterature Straniere. Come posso aiutarti?</template>
+    </category>
+    
+    <category>
+        <pattern>Dove si trova la biblioteca?</pattern>
+        <template>
+            <random>
+            <li>La Biblioteca del Polo di Lingue e Letterature straniere si trova a Milano in piazza S. Alessandro, 1</li>
+            <li>Vuoi venire a trovarci? Siamo a Milano in piazza S. Alessandro, 1</li>
+            </random>
+            </template>
+    </category>
+</aiml>
