@@ -1,22 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <category>
-        <pattern>*</pattern>
-        <template>I have no answer for that.</template>
-    </category>
-  
+    
     <category>
-        <pattern>Ciao</pattern>
-        <template>Ciao! Sono Bookly, il nuovo assistende della Biblioteca di Lingue e Letterature Straniere. Come posso aiutarti?</template>
+        <pattern> Ciao ^ </pattern>
+        <template>Ciao! Sono Bookly, il nuovo assistente della Biblioteca di Lingue e Letterature Straniere di Milano. Come posso aiutarti? <br/>
+                  For English, write "hi"
+                <button>Informazioni generali</button>
+                <button>Prestito</button>
+                <button>Restituzione</button>
+                <button>Studio</button>
+                <button>Risorse Digitali</button>
+        </template>
     </category>
     
     <category>
-        <pattern>Dove si trova la biblioteca?</pattern>
+        <pattern>Buongiorno ^</pattern>
+        <template><srai> Ciao </srai></template>
+    </category>
+    
+    <category>
+        <pattern>Piacere ^</pattern>
+        <template><srai> Ciao </srai></template>
+    </category>
+    
+    <category>
+        <pattern>Salve ^</pattern>
+        <template><srai> Ciao </srai></template>
+    </category>
+    
+    <category>
+        <pattern>Informazioni Generali</pattern>
+        <template>Cosa vuoi sapere esattamente?
+                <button>Dove si trova la biblioteca</button>
+                <button>Gli orari della biblioteca</button>
+                <button>Come contattare la biblioteca</button>
+                <button>Avvisi della Biblioteca</button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Dove si trova la biblioteca ^ </pattern>
         <template>
             <random>
-            <li>La Biblioteca del Polo di Lingue e Letterature straniere si trova a Milano in piazza S. Alessandro, 1</li>
-            <li>Vuoi venire a trovarci? Siamo a Milano in piazza S. Alessandro, 1</li>
+                <li>La Biblioteca del Polo di Lingue e Letterature straniere si trova a Milano in piazza S. Alessandro, 1. Trovaci sulla <link> <text> mappa </text> <url> https://lc.cx/JVqB21</url> </link> C'è altro che possa fare per te? <br/> 
+                <button>Sì, grazie</button>
+                <button>No, grazie</button></li>
+                <li>Vuoi venire a trovarci? Siamo a Milano in piazza S. Alessandro, 1. Trovaci sulla <link> <text> mappa </text> <url> https://lc.cx/JVqB21</url></link> C'è altro che possa fare per te?  
+                <button>Sì, grazie</button>
+                <button>No, grazie</button></li>
             </random>
-            </template>
+        </template>
     </category>
+    
+    <category>
+        <pattern>Come contattare la biblioteca ^ </pattern>
+        <template>
+            Puoi contattare la Biblioteca di Lingue e Letterature Straniere chiamando il numero 02 50313567 o scrivendo a info.biblingue@unimi.it. 
+            Per maggiori informazioni clicca su <link> <text>Contatti</text> <url>https://lc.cx/wOSKwd</url></link>
+            C'è altro che posso fare per te?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button></template>
+    </category>
+    
+    <category>
+        <pattern>Avvisi della biblioteca </pattern>
+        <template>
+            Puoi trovare tutti gli avvisi della Biblioteca di Lingue e Letterature Straniere a questo link: <link> <text>Nuovi Avvisi</text> <url>https://lc.cx/AnbPA0</url></link>
+            Posso esserti d'aiuto in qualche altro modo?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
+        </template>
+    </category>
+
+    <category>
+        <pattern> Sì, grazie </pattern>
+        <template> Benissimo! Di quale  argomento ti serve sapere di più? 
+                <button>Informazioni generali</button>
+                <button>Prestito</button>
+                <button>Restituzione</button>
+                <button>Studio</button>
+                <button>Risorse Digitali</button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> Grazie </pattern>
+        <template>Di niente! Se ti viene in mente altro, sono qui!</template>
+    </category>
+    
+    <category>
+        <pattern>No, grazie </pattern>
+        <template>Perfetto! Se ti viene in mente altro, sono qui!</template>
+    </category>
+    
+    <category>
+        <pattern>È tutto ^</pattern>
+        <template><srai>No ^</srai></template>
+    </category>
+    
 </aiml>

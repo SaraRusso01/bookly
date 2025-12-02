@@ -1,30 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-<category>
-        <pattern> * restituire * </pattern>
+    <category>
+        <pattern>Restituzione</pattern>
+        <template>In cosa posso aiutarti più nello specifico? 
+           <button>Come restituire un libro</button>
+           <button>Dove restituire il libro</button>
+           <button>Ritardo nella restituzione</button>
+        </template>
+    </category>
+
+    <category>
+        <pattern> Come restituire un libro </pattern>
         <template>
-            <think><set name="domanda"><star index="1"/></set></think>
-            <think><set name="oggetto"><star index="2"/></set></think>
-            Puoi restituire il libro direttamente in biblioteca o utilizzando il box di restituzione fuori dall'ingresso.
+            Puoi restituire il libro al banco di accoglienza o utilizzando il box di restituzione fuori dall'ingresso.
+            C'è altro che possa fare per te?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
         </template>    
     </category>
 
- <category>
-        <pattern> * restituire </pattern>
+     <category>
+        <pattern> Dove restituire il libro </pattern>
         <template>
-            <think><set name="domanda"><star index="1"/></set></think>
-            <think><set name="oggetto"><star index="2"/></set></think>
-            Puoi restituire il libro direttamente in biblioteca o utilizzando il box di restituzione fuori dall'ingresso.
+            Puoi restituire il libro in qualsiasi biblioteca dell'Ateneo al banco di accoglienza o nei box disponibili all’esterno delle biblioteche. 
+            Hai bisogno di altro?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
        </template>
     </category>
     
-  <category>
-        <pattern> restituire * </pattern>
+    <category>
+        <pattern>Ritardo nella restituzione</pattern>
         <template>
-            <think><set name="domanda"><star index="1"/></set></think>
-            <think><set name="oggetto"><star index="2"/></set></think>
-            Puoi restituire il libro direttamente in biblioteca o utilizzando il box di restituzione fuori dall'ingresso.
+            Finché non restituisci il libro non potrai prendere in prestito altri volumi in nessuna biblioteca dell’Ateneo.
+            Se restituisci un libro con un ritardo superiore a 3 giorni sarai sospeso dal servizio di prestito in tutte le biblioteche dell’Ateneo per un tempo pari a quello del ritardo.
+            Per gli studenti, un ritardo superiore a 60 giorni comporta il temporaneo blocco della carriera.
+            Ti serve sapere qualcos'altro?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
        </template>
     </category>
 

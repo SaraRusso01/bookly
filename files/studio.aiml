@@ -1,32 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-<category>
-        <pattern> * prenotare un posto in biblioteca</pattern>
-        <template> 
-        Puoi prenotare un posto tramite l'applicazione LezioniUnimi o tramite la <link> <text> piattaforma web </text> <url> https://prenotabiblio.sba.unimi.it/portalePlanning/biblio</url> </link> autenticandoti con le credenziali della posta elettronica d’Ateneo. </template> 
+    
+     <category>
+        <pattern>Studio</pattern>
+        <template>Che cosa ti serve sapere esattamente? 
+           <button>Come accedere alla biblioteca</button>
+           <button>Come prenotare un posto studio</button>
+           <button>Come prenotare un posto consultazione</button>
+           <button>Come modificare la prenotazione</button>
+           <button>Come liberare il posto</button>
+           <button>E se sono in ritardo</button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> Come accedere alla biblioteca</pattern>
+        <template>Puoi accedere alla biblioteca per ritirare o consegnare i libri senza prenotazione, ma per studiare o consultare devi prenotare un posto.
+                  Vuoi che ti spieghi come? 
+                 <button>Posto Studio</button>
+                 <button>Posto Consultazione</button>
+        </template> 
     </category>
 
     <category>
-        <pattern> * venire a studiare </pattern>
-        <template> Puoi prenotare un posto tramite l'applicazione LezioniUnimi o tramite la <link> <text> piattaforma web </text> <url> https://prenotabiblio.sba.unimi.it/portalePlanning/biblio</url> </link>autenticandoti con le credenziali della posta elettronica d’Ateneo. </template> 
+        <pattern> ^ Posto Studio </pattern>
+        <template> Puoi prenotare un posto studio tramite l’App LezioniUnimi o la <link> <text> piattaforma web </text> <url> https://prenotabiblio.sba.unimi.it/portalePlanning/biblio</url> </link> autenticandoti con le credenziali della posta elettronica d’Ateneo o inserendo il tuo codice fiscale. 
+        Al momento della preonotazione devi selezionare la biblioteca, l'orario, la durata della tua permanenza e il servizio "studio in sede". 
+        Ricordati di arrivare entro 30 minuti dall'inizio della prenotazione e di comunicare il tuo arrivo al personale bibliotecario! 
+        C'è altro che possa fare per te?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button></template>
     </category>
+
   
    <category>
-     <pattern> posso prenotare * per *</pattern>
+     <pattern> ^ Posto Consultazione </pattern>
      <template>
-        <think><set name="azione"><star index="1"/></set></think>
-        <think><set name="scopo"><star index="2"/></set></think>
-        Certo! Puoi prenotare <get name="azione"/> per <get name="scopo"/> tramite l’App LezioniUnimi o la <link> <text> piattaforma web </text> <url> https://prenotabiblio.sba.unimi.it/portalePlanning/biblio</url> </link> autenticandoti con le credenziali della posta elettronica d’Ateneo.
+        Puoi prenotare un posto consultazione tramite l’App LezioniUnimi o la <link> <text> piattaforma web </text> <url> https://prenotabiblio.sba.unimi.it/portalePlanning/biblio</url> </link> autenticandoti con le credenziali della posta elettronica d’Ateneo o inserendo il tuo Codice Fiscale. 
+        Al momento della preonotazione devi selezionare la biblioteca, l'orario, la durata della tua permanenza e il servizio "Consultazione in sede", specificando quale materiale ti serve consultare (Se possibile, inserisci anche la collocazione che trovi su Minerva!). 
+        Ricordati di prenotare la consultazione almeno 24 ore prima e di arrivare entro 30 minuti dall'inizio della prenotazione!
+        Ti serve sapere qualcos'altro?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
      </template>
     </category> 
     
- <category>
-     <pattern> * prenotare * per * </pattern>
+    <category>
+     <pattern>Come modificare la prenotazione</pattern>
      <template>
-        <think><set name="domanda"><star index="1"/></set></think>
-        <think><set name="azione"><star index="2"/></set></think>
-        <think><set name="scopo"><star index="3"/></set></think>
-        Puoi prenotare <get name="azione"/> per <get name="scopo"/> tramite l’App LezioniUnimi o la <link> <text> piattaforma web </text> <url> https://prenotabiblio.sba.unimi.it/portalePlanning/biblio</url> </link> autenticandoti con le credenziali della posta elettronica d’Ateneo.
+       Purtroppo non è possibile modificare i dettagli della tua prenotazione (sede, orario o durata), ma puoi distire la tua prenotazione aprendo la scheda “Gestisci prenotazione” e in seguito effettuarne una nuova. 
+       Posso aiutarti in qualche altro modo?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
      </template>
     </category> 
+    
+     <category>
+     <pattern>Come liberare il posto </pattern>
+     <template> Se devi uscire in anticipo, apri la scheda “Gestisci prenotazione” ed elimina la prenotazione effettuata per rimettere a disposizione il posto per un’altra prenotazione!
+     Ti serve qualche altra informazione? 
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
+     </template>
+    </category> 
+
+     <category>
+     <pattern>E se sono in ritardo</pattern>
+     <template> Sotto i 30 minuti dall’inizio della prenotazione, non succede niente. 
+                Oltre i 30 minuti la prenotazione viene automaticamente cancellata.
+                Vuoi sapere qualcos'altro?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
+     </template>
+    </category> 
+
 </aiml>

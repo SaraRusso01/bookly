@@ -2,46 +2,55 @@
 <aiml version="2.0">
     
     <category>
-        <pattern> * accedere * risorse online * casa ^ </pattern>
-        <template> Puoi accedere da casa alle risorse elettroniche dell’Ateneo autenticandoti con le credenziali d’Ateneo. Per maggiori dettagli, visita la pagina ufficiale: 
-                  <a href="https://sba.unimi.it/it/servizi/accesso-alle-risorse-elettroniche" target="_blank">Accesso alle risorse elettroniche</a></template>
+        <pattern>Risorse Digitali</pattern>
+        <template>In cosa posso aiutarti più nello specifico?
+           <button>Cosa sono le Risorse Digitali</button>
+           <button>Come individuare le Risorse Digitali</button>
+           <button>Come accedere alle Risorse Digitali</button>
+           <button>Maggiori informazioni sulle Risorse Digitali</button>
+        </template>
+    </category>
+
+    <category>
+        <pattern> Cosa sono le Risorse Digitali </pattern>
+        <template>Le Risorse Digitali sono periodici, ebook, banche dati e molto altro, sottoscritte in abbonamento o acquistate in accesso perpetuo, a cui è possibile  accedere tramite <link> <text>Minerva</text> <url>https://lc.cx/LnsQvI</url> </link>
+        <button>
+            <text>Accedere Tramite Minerva</text>
+            <postback>Come accedere alle Risorse Digitali</postback>
+        </button>
+        </template>
     </category>
     
      <category>
-        <pattern> * accedere * risorse digitali * casa ^ </pattern>
-        <template><srai> * accedere * risorse online * casa ^ </srai></template>
-    </category>
-
-    <category>
-        <pattern> * accedere * risorse elettroniche * casa ^ </pattern>
-        <template><srai> * accedere * risorse online * casa ^ </srai></template>
-    </category>
-    
-    <category>
-         <pattern>* Mineva * accedere * risorse *</pattern>
-         <template>  Sì, puoi accedere alle risorse elettroniche anche tramite il catalogo Minerva, selezionando l’opzione “Documenti disponibili online” o filtrando per tipo di risorsa.</template>
-    </category>
-    
-    <category>
-         <pattern>* accedere * risorse * Minerva </pattern>
-         <template>  Sì, puoi accedere alle risorse elettroniche anche tramite il catalogo Minerva, selezionando l’opzione “Documenti disponibili online” o filtrando per tipo di risorsa.</template>
-    </category>
-
-    <category>
-        <pattern> * risorse ^ </pattern>
-         <template>Le risorse elettroniche dell’Ateneo sono accessibili agli utenti autenticati. Vuoi sapere come accedere da casa o tramite Minerva? Per maggiori dettagli, visita la pagina ufficiale: 
-                  <a href="https://sba.unimi.it/it/servizi/accesso-alle-risorse-elettroniche" target="_blank">Accesso alle risorse elettroniche</a> </template>
-    </category>
-    
-    <category>
-        <pattern> * </pattern>
-        <template>
-            <think><set name="risorse"><star/></set></think>
-            <condition name="risorse">
-                <li value="Minerva">Puoi accedere alle risorse elettroniche anche tramite il catalogo Minerva, selezionando l’opzione “Documenti disponibili online” o filtrando per tipo di risorsa.</li>
-                <li value="Casa">Puoi accedere da casa alle risorse elettroniche dell’Ateneo autenticandoti con le credenziali d’Ateneo.</li>
-            </condition>
+        <pattern>Come individuare le Risorse Digitali</pattern>
+        <template> Per individuare le risorse digitali, occore avviare una ricerca in <link> <text>Minerva</text> <url>https://lc.cx/LnsQvI</url> </link> applicando il filtro “Documenti disponibili online” dal menu a sinistra. 
+        Dopo aver individuato la risorsa che si vuole consultare, basterà selezionare la scheda e seguire le istruzioni presenti nella sezione “Visualizza online”.
+        Ti serve sapere altro? 
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
         </template>
     </category>
+
+    <category>
+        <pattern>Come accedere alle Risorse Digitali</pattern>
+        <template>Le risorse elettroniche sono accessibili in due modalità:
+            <ol>
+                <li>Collegandosi alla rete di Ateneo attraverso i dispositivi personali o dai computer presenti nelle biblioteche, con cui si accede direttamente e in forma anonima</li>
+                <li>Autenticandosi tramite Minerva con le credenziali di posta elettronica d’Ateneo. </li>
+            </ol>
+                Vuoi sapere qualcos'altro?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
+            </template>
+    </category>
+    
+    <category>
+         <pattern>Maggiori Informazioni sulle Risorse Digitali</pattern>
+         <template>Per maggiori informazioni sulle  Risorse Digitali e sulle condizioni d'uso, visita il sito:  <link> <text> Risorse Elettroniche </text> <url>https://lc.cx/WHvLnn</url> </link> 
+                Posso esserti utile in qualche altro modo?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button></template>
+    </category>
+    
     
 </aiml>

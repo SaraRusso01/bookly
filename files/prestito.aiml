@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-<link>
-    <text>Minerva</text>
-    <url> https://lc.cx/LnsQvI</url>
-</link>
 
-<category>
-        <pattern> posso prendere in prestito un libro </pattern>
+     <category>
+        <pattern>Prestito</pattern>
+        <template>Su cosa posso darti più dettagli? 
+                <button>Come richiedere in prestito un libro</button>
+                <button>Come ritirare un libro</button><br/>
+                <button>Per quanto tempo posso tenere un libro in prestito</button>
+                <button>Quanti libri posso prendere in prestito</button>
+        </template>
+    </category>
+
+    <category>
+        <pattern> Come richiedere in prestito un libro </pattern>
         <template>
-            
-                <random>
-                    <li>Puoi prendere in prestito un libro accedendo a<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link> il nostro catalogo online.</li>
-                    <li>Sfoglia<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link>il nostro catalogo online  e trova qui il libro che stai cercando!</li>
-                    <li>Per prendere in prestito un libro occorre prenotarlo attraverso<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link>accedendo con il tuo account universitario.</li>
-                    <li>Trovi tutti i libri disponibili per il prestito su<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link>il nostro catalogo online. Prenota qui il tuo libro e scegli in quale biblioteca preferisci ritirarlo!</li>
-                </random>
-           
+            <random>
+                <li>Puoi prendere in prestito un libro accedendo a <link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link> il nostro catalogo online. 
+                Cerca il libro, verifica che sia prestabile e scegli la biblioteca che preferisci per ritirare il volume. 
+                C'è altro che possa fare per te? 
+                <button>Sì, grazie</button>
+                <button>No, grazie</button></li>
+                <li>Sfoglia<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link>il nostro catalogo online  e trova qui il libro che stai cercando!
+                Hai bisogno di altro? 
+                <button>Sì, grazie</button>
+                <button>No, grazie</button></li>
+                <li>Per prendere in prestito un libro occorre prenotarlo attraverso<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link>accedendo con il tuo account universitario.
+                Posso aiutarti in qualche altro modo? 
+                <button>Sì, grazie</button>
+                <button>No, grazie</button></li>
+                <li>Trovi tutti i libri disponibili per il prestito su<link> <text> Minerva </text> <url> https://lc.cx/LnsQvI</url> </link>il nostro catalogo online. Prenota qui il tuo libro e scegli in quale biblioteca preferisci ritirarlo!
+                Ti serve sapere altro? 
+                <button>Sì, grazie</button>
+                <button>No, grazie</button></li>
+            </random>
         </template>    
     </category>
     
      <category>
-        <pattern> Come * prendere in prestito un libro</pattern>
-        <template><srai>Posso prendere in prestito un libro</srai></template>
+        <pattern> Come ritirare un libro</pattern>
+        <template>Aspetta la mail di notifica della disponibilità del materiale per il ritiro, dopodichè recati nella biblioteca selezionata. 
+        Per prendere i libri in prestito non è necessario prenotare un posto studio, ma in alcune biblioteca potrebbe essere richiesto il Bedge Universitario.
+        Vuoi sapere qualcos'altro?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button></template>
     </category>
     
     <category>

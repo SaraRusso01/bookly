@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<category>
+        <pattern>Booking a Study Space</pattern>
+        <template>
+            What exactly would you like to know?
+            <button>How to access the library</button>
+            <button>How to book a study seat</button>
+            <button>How to book a consultation seat</button>
+            <button>How to cancel a reservation</button>
+            <button>How to modify a reservation</button>
+            <button> Delay </button>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>How to access the library</pattern>
+        <template>
+        Library access is free and unrestricted: bookings are not required for borrowing or returning books.
+        However, to secure a study space, users must book a seat via the LezioniUnimi app or <link> <text>web platform</text> <url>https://lc.cx/xnzEgn</url> </link>
+        Do you want me to explain how to do that? 
+        <button>How to book a study seat</button>
+        <button>How to book a consultation seat</button>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>How to book a study seat</pattern>
+        <template> You can book a study seat using the LezioniUnimi app or the <link> <text>web platform</text> <url>https://lc.cx/xnzEgn</url> </link>
+                   Click on New booking, choose the library and room, then select date, time, and duration.
+                   Log in with your University email (or fill in your details if you're an external user).
+                   Finally, confirm your booking and arrive at the library within 30 minutes of your booking start time.
+                   Is there anything else you'd like to know? 
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>How to book a consultation seat</pattern>
+        <template> You can book a consultation seat using the LezioniUnimi app or the <link> <text>web platform</text> <url>https://lc.cx/xnzEgn</url> </link> by logging in with your University email credentials or entering your tax code.
+                   When booking, select the library, time, duration, and the service “On-site consultation”, specifying the material you need (if possible, include the location from Minerva!).
+                   Please book at least 24 hours in advance and arrive within 30 minutes of your reservation start time!
+                   Anything else I can help you with? 
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>How to cancel a reservation</pattern>
+        <template>Log in to the LezioniUnimi app or the <link> <text>web platform</text> <url>https://lc.cx/xnzEgn</url> </link> 
+                  Click on "Manage booking" and cancel your reservation, so the seat becomes available for other users.
+                  Can I help you with anything else?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>How to modify a reservation</pattern>
+        <template>Unfortunately, you can’t change the details of your booking (location, time, or duration).
+                  However, you can cancel it by opening the "Manage booking" section, and then make a new one.
+                  Do you need anything else?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+	
+	<category>
+        <pattern> Delay </pattern>
+        <template>If you arrive within 30 minutes of your booking start time, your seat will still be available. 
+                  After 30 minutes, unclaimed bookings will be automatically cancelled.
+                  Is there anything else you'd like to know?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+	
+</aiml>

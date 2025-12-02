@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>Digital Resources</pattern>
+        <template>
+            How can I help you more specifically?
+            <button>What are Digital Resources</button>
+            <button>How to find Digital Resources</button>
+            <button>How to access Digital Resources</button>
+            <button>More information about Digital Resources</button>
+        </template>
+    </category>
+
+    <category>
+        <pattern> What are Digital Resources </pattern>
+        <template>Digital Resources are journals, ebooks, databases, and much more, available through subscriptions or perpetual access, that can be accessed via Minerva.
+        <button>
+            <text>Accessed via Minerva.</text>
+            <postback>How to access Digital Resources</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>How to find Digital Resources</pattern>
+        <template> You can search and access electronic resources via the <link> <text>Minerva</text> <url>https://lc.cx/LnsQvI</url> </link>
+                   Search in Minerva, filter by “Available online,” then select a result and follow the “View Online” instructions.
+                   Access conditions may vary: some resources may require specific software or a personal account.
+                   Can I help you with anything else?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>How to access Digital Resources</pattern>
+        <template> Electronic resources can be accessed "on campus" via University network (Eduroam, Ethernet, or library computers). "off campus" by logging into <link> <text>Minerva</text> <url>https://lc.cx/LnsQvI</url> </link> with University email credentials.
+                   Is there anything else I can do for you?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>More information about Digital Resources</pattern>
+        <template>For more information on Digital Resources and their usage conditions, visit: <link> <text> Electronic Resources </text> <url>https://lc.cx/3Mu8Zk</url> </link>
+                  Is there anything else you'd like to know? 
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+
+    <category>
+        <pattern> * </pattern>
+        <template><srai> Ciao </srai></template>
+    </category>
+
+</aiml>

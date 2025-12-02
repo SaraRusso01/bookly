@@ -1,34 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 	
-	<category>
-        <pattern> Per quanto tempo * prendere in prestito un libro </pattern>
+    
+    <category>
+        <pattern> Per quanto tempo posso tenere un libro in prestito </pattern>
         <template>
-            Sei uno studente, un docente, un dottorando o un utente esterno?
+            Dipende dal tuo ruolo. Sei uno studente, un professore, un dottorando o un utente esterno?
+                  <button>Uno studente</button> 
+                  <button>Un professore o un dottorando</button>
+                  <button>Un utente esterno</button>
         </template>
     </category>
 
-     <category>
-        <pattern>Per quanti  giorni * prendere in prestito un libro</pattern>
-        <template><srai> Per quanto tempo * prendere in prestito un libro</srai></template>
-    </category>
 
      <category>
         <pattern>Quanti libri posso prendere in prestito </pattern>
-        <template><srai> Per quanto tempo * prendere in prestito un libro</srai></template>
+        <template><srai> Per quanto tempo posso tenere un libro in prestito</srai></template>
     </category>
     
     <category>
-        <pattern> * </pattern>
+        <pattern> ^ studente </pattern>
         <template>
-            <think><set name="utente"><star/></set></think>
-            <condition name="utente">
-                <li value="studente">Come studente, puoi prendere in prestito fino a 25 libri per 30 giorni. Se si tratta di libri d'esame, il prestito è di 15 giorni, prorogabile due volte. Maggiori dettagli qui:<a href="https://sba.unimi.it/it/servizi/prestito">Info prestito</a></li>
-                <li value="Docente">Come docente, puoi prendere in prestito fino a 25 libri per 60 giorni, con la possibilità di prorogare per un massimo di 120 giorni. Maggiori dettagli qui:<a href="https://sba.unimi.it/it/servizi/prestito">Info prestito</a></li>
-                <li value="Dottorando"> In quanto dottorando, puoi prendere in prestito fino a 25 libri per 60 giorni, con la possibilità di prorogare per un massimo di 120 giorni. Maggiori dettagli qui:<a href="https://sba.unimi.it/it/servizi/prestito">Info prestito</a></li>
-                <li value="Utente Esterno"> Se sei un utente esterno, puoi accedere al prestito solo con una lettera di presentazione (malleveria) rilasciata da un docente dell’Ateneo. Qui trovi maggiori dettagli: <a href="https://sba.unimi.it/it/servizi/prestito">Info prestito</a></li>
-            </condition>
+            Come studente, puoi prendere in prestito fino a 25 libri per 30 giorni. Se si tratta di libri d'esame, il prestito è di 15 giorni, prorogabile due volte. Maggiori dettagli qui:<a href="https://sba.unimi.it/it/servizi/prestito">Info prestito</a>
+        Vuoi sapere qualcos'altro?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
         </template>
     </category>
-	
+    
+     <category>
+        <pattern> ^ docente o dottorando </pattern>
+        <template>
+           Come docente o dottorando, puoi prendere in prestito fino a 25 libri per 60 giorni, con la possibilità di prorogare per un massimo di 120 giorni. Maggiori dettagli qui:<a href="https://sba.unimi.it/it/servizi/prestito">Info prestito</a>
+           Ti  serve sapere qualcos'altro? 
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern> ^ dottorando </pattern>
+        <template>
+          In quanto docente o dottorando, puoi prendere in prestito fino a 25 libri per 60 giorni, con la possibilità di prorogare per un massimo di 120 giorni. Maggiori dettagli qui:<a href="https://sba.unimi.it/it/servizi/prestito">Info prestito</a>
+          Posso aiutarti in qualche altro modo?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern> ^ utente esterno </pattern>
+        <template>
+          Se sei un utente esterno, puoi accedere al prestito solo con una lettera di presentazione (malleveria) rilasciata da un docente dell’Ateneo. Qui trovi maggiori dettagli: <a href="https://sba.unimi.it/it/servizi/prestito">Info prestito</a>
+          C'è altro che possa fare per te?
+                <button>Sì, grazie</button>
+                <button>No, grazie</button>
+        </template>
+    </category>
+    
 </aiml>

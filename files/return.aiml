@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+    <category>
+        <pattern>Return Books</pattern>
+        <template>
+            How can I help you more specifically?
+            <button>How to return a book</button>
+            <button>Where to return the book</button>
+            <button>Late return</button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>How to return a book</pattern>
+        <template>You can return the book  either at the circulation desk or via designated return boxes outside the libraries. 
+                  You will receive an email confirmation once your return has been processed.
+                  Can I help you with anything else?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+                  </template>
+    </category>
+
+    <category>
+        <pattern>Where to return the book</pattern>
+        <template>You can return books at any University library.
+                  Do you need anything else?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Late Return</pattern>
+        <template>A delay of more than 3 days results in a suspension from borrowing services at all University libraries for a period equal to the length of the delay.
+                  Check the website for more details about <link> <text>late returns</text> <url>https://lc.cx/URIiDi</url></link>
+                  Is there anything else you'd like to know?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+                  </template>
+    </category>
+
+
+</aiml>

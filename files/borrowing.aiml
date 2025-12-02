@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+   <category>
+        <pattern>Borrowing Books</pattern>
+        <template>Let me know what you'd like me to explain better:
+                <button>How to request a book loan</button>
+                <button>How to pick up the book</button>
+                <button>How long can I keep a book on loan</button>
+                <button>How many books can I borrow</button>
+        </template>
+   </category>
+
+    <category>
+        <pattern> How to request a book loan</pattern>
+        <template>You can find all books available for loan on <link> <text>Minerva</text> <url>https://lc.cx/LnsQvI</url> </link> our online catalogue.
+                  Reserve your book here and choose the library where you'd like to pick it up!
+                  Can I help you with anything else?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+                  </template>
+    </category>
+
+    <category>
+        <pattern> How to pick up the book</pattern>
+        <template>Wait for the email confirming that your item is ready for pickup, then go to the library you selected.
+                  You don’t need to reserve a study space to borrow books, but some libraries may require your University Badge.
+                  Is there anything else you'd like to know? 
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+                  </template>
+    </category>
+    
+    <category>
+        <pattern> How long can I keep a book on loan</pattern>
+        <template> It depends. Are you a student, a professor, a PhD student or an external user?
+                  <button>A student</button> 
+                  <button>A professor or PhD student</button>
+                  <button>An external user</button></template>
+    </category>
+    
+    <category>
+        <pattern> How many books can I borrow</pattern>
+        <template><srai>How long can I keep a book on loan</srai></template>
+    </category>
+
+     <category>
+        <pattern> ^ student </pattern>
+        <template>
+            If you are a student, you can borrow up to 25 books for 30 days and it can be renewed twice.
+            More details here: <a href="https://lc.cx/bCC8p_">Loan Info</a>
+            Is there anything else you'd like to know?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+
+     <category>
+        <pattern> A professor or PhD student </pattern>
+        <template>
+            If you are a professor or a PhD student, you can borrow up to 25 books for 60 days and the loan can be renewed twice.
+            More details here: <a href="https://lc.cx/bCC8p_">Loan Info</a>
+            Can I help you with anything else?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern> ^ PhD student </pattern>
+        <template>
+            If you are a PhD student, you can borrow up to 25 books for 60 days and the loan can be renewed twice.
+            More details here: <a href="https://lc.cx/bCC8p_">Loan Info</a>
+            Do you need anything else?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern> ^ external user </pattern>
+        <template>
+           If you are an external user, you can access the loan service only with a letter of recommendation (malleveria) issued by a university professor.
+           Here you can find more details: <a href="https://lc.cx/bCC8p_">Loan Info</a>
+           Is there anything else I can do for you? 
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+    
+</aiml>

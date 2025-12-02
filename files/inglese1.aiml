@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	 <category>
+        <pattern> Hi ^ </pattern>
+        <template>Hello! I'm Bookly, the new assistant of the Library of the Centre for Foreign Languages and Literatures in Milan. How can I help you?
+        <button>General Information</button>
+        <button>Borrowing Books</button>
+        <button>Return Books</button>
+        <button>Booking a Study Space</button>
+        <button>Digital Resources</button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> Hello ^ </pattern>
+        <template> <srai> Hi </srai> </template>
+    </category>
+    
+    <category>
+        <pattern>General Information</pattern>
+        <template>What do you want to know exactly? 
+                <button>Library location</button>
+                <button>Opening hours</button>
+                <button>How to contact the library</button>
+                <button>News and events</button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> Library location</pattern>
+        <template>The Library of the Centre for Foreign Languages and Literatures is located  in S. Alessandro, 1, Milan. Find us on  <link> <text> google maps </text> <url> https://lc.cx/JVqB21</url> </link> 
+                  Can I help you with anything else?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Opening hours </pattern>
+        <template> The library is open Monday to Friday, from 9:00 am to 6:00 pm. Just keep in mind that from 5:00 to 6:00 pm, only basic services are available!
+                   For additional information, click the button below:
+                   <reply>
+                   <text>Services</text>
+                   <postback>Services</postback>
+        </reply>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>Services </pattern>
+        <template> Basic library services are available throughout the entire opening hours. These include study spaces, open-shelf browsing, self-checkout, and book returns using the drop-off boxes.
+                   Advanced services are provided from 9:00 am to 5:00 pm, such as bibliographic assistance, help at the service desk, interlibrary loan, and access to materials stored in the library’s back offices.
+                   Is there anything else I can do for you?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>How to contact the library</pattern>
+        <template>
+            You can contact the Languages and Foreign Literatures Library by calling +39 02 50313567 or writing to info.biblingue@unimi.it.
+            For more information, click here:<link> <text>Contact us</text> <url>https://lc.cx/CEAsTG</url></link>
+            Is there anything else you'd like to know? 
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>News and events</pattern>
+        <template>
+            You can find here all the latest library's <link> <text>News and events</text> <url>https://lc.cx/SCuYDa</url></link>
+            Anything else I can help you with?
+                <button>Yes, thank you</button>
+                <button>No, thank you</button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> Yes, thank you </pattern>
+        <template> Great! What topic do you need more information on?
+                <button>General Information</button>
+                <button>Borrowing Books</button>
+                <button>Return Books</button>
+                <button>Booking a Study Space</button>
+                <button>Digital resources</button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>No, thank you</pattern>
+        <template>Great! Just let me know if you need anything else!</template>
+    </category>
+    
+</aiml>
